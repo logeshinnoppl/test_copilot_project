@@ -1,0 +1,17 @@
+{
+  "tracker": "none",
+  "commands": {
+    "lint": ".venv/bin/ruff check .",
+    "typecheck": ".venv/bin/mypy app.py db.py validation.py",
+    "test": ".venv/bin/pytest",
+    "build": "",
+    "e2e": "npx playwright test"
+  },
+  "e2e": {
+    "baseUrl": "http://127.0.0.1:5055",
+    "startCommand": "rm -f instance/e2e.db && .venv/bin/python app.py"
+  },
+  "baseBranch": "main",
+  "prHost": "github",
+  "postEditCheck": false
+}
